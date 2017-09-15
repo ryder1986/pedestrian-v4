@@ -44,15 +44,15 @@ HEADERS += \
 FORMS += \
         mainwindow.ui
 
-QMAKE_LIBDIR+="C:/Users/root/Desktop/opencv-2.4.9/opencv/build/x64/vc12/lib/"
-DEPENDPATH+="C:/Users/root/Desktop/opencv-2.4.9/opencv/build/x64/vc12/bin/"
+#QMAKE_LIBDIR+="C:/Users/root/Desktop/opencv-2.4.9/opencv/build/x64/vc12/lib/"
+#DEPENDPATH+="C:/Users/root/Desktop/opencv-2.4.9/opencv/build/x64/vc12/bin/"
 win32{
 INCLUDEPATH +="C:\Users\root\Desktop\opencv-2.4.9\opencv\build\include"
-LIBS+="E:\zenith\body-detect\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_core249.lib"
-LIBS+="E:\zenith\body-detect\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_highgui249d.lib"
-LIBS+="E:\zenith\body-detect\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_ml249d.lib"
-LIBS+="E:\zenith\body-detect\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_video249d.lib"
-LIBS+="E:\zenith\body-detect\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_imgproc249d.lib"
+LIBS+="C:\Users\root\Desktop\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_core249.lib"
+LIBS+="C:\Users\root\Desktop\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_highgui249d.lib"
+LIBS+="C:\Users\root\Desktop\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_ml249d.lib"
+LIBS+="C:\Users\root\Desktop\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_video249d.lib"
+LIBS+="C:\Users\root\Desktop\opencv-2.4.9\opencv\build\x64\vc12\lib\opencv_imgproc249d.lib"
 }
 unix{
 LIBS+=-lopencv_core  -lopencv_highgui  -lopencv_objdetect -lopencv_imgproc -lopencv_ml -lopencv_video

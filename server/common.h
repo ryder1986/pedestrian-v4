@@ -46,8 +46,8 @@ inline int log_file(char *fname,char *log)
 //	}
     FILE *fp = NULL;
     if((fp=fopen(dirname,"r"))==NULL){
-//        sprintf(cmd_buf,"mkdir %s",dirname);
-//        system(cmd_buf);
+        sprintf(cmd_buf,"mkdir %s",dirname);
+        system(cmd_buf);
     }
     else
         fclose(fp);
