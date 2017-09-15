@@ -25,7 +25,7 @@ public:
     VideoSrc(QString path)
     {
         //     p_cap= cvCreateFileCapture("rtsp://192.168.1.81:554");  //读取视频
-        prt(info,"start video src");
+    //    prt(info,"start video src %s",url);
         strcpy(url,path.toStdString().data());
         p_cap= cvCreateFileCapture(url);  //读取视频
 
@@ -111,7 +111,6 @@ public:
     }
     Mat *fetch_frame_mat()
     {
-        //   prt(info,"fetching frame from %s",url);
         IplImage *ret_img;
         int err=0;
         ret_img=cvQueryFrame(p_cap);
@@ -123,7 +122,7 @@ public:
             //    QThread::sleep(1);
             if(video_connected_flag==true)
             {
-
+                prt(info,"%s disconnected",url);
                 emit video_disconnected();
                 video_connected_flag=false;
             }
@@ -131,7 +130,7 @@ public:
         }else{
             if(video_connected_flag==false)
             {
-
+                prt(info,"%s connected",url);
                 emit video_connected();
                 video_connected_flag=true;
             }
@@ -142,15 +141,6 @@ public:
         else
             return ret_mat;
     }
-    // void operator +(int t)
-    // {
-
-    // }
-
-    //    int  operator +(int i)
-    //    {
-    //       return i+1;
-    //    }
     char *get_url(){
         return url;
     }

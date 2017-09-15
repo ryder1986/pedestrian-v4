@@ -28,7 +28,7 @@ public:
     }
 };
 
-
+#include <QDir>
 inline int log_file(char *fname,char *log)
 {
 
@@ -37,10 +37,10 @@ inline int log_file(char *fname,char *log)
    }
 
 
-    char log_buf[BUFSIZE];
+ //   char log_buf[BUFSIZE];
     char filename[BUFSIZE];
     char dirname[BUFSIZE] = { "log" };
-    char cmd_buf[BUFSIZE] = { };
+ //   char cmd_buf[BUFSIZE] = { };
 //	if(dname!=NULL){
 //		strcpy(dirname,dname);
 //	}
@@ -48,6 +48,11 @@ inline int log_file(char *fname,char *log)
     if((fp=fopen(dirname,"r"))==NULL){
 //        sprintf(cmd_buf,"mkdir %s",dirname);
 //        system(cmd_buf);
+        printf("createing dir log ");
+      //  mkdir("log","a+");
+        QDir d;
+        d.mkdir("log");
+
     }
     else
         fclose(fp);

@@ -85,9 +85,7 @@ public slots:
     }
     void source_disconnected()
     {
-        prt(info,"disconnected");
         timer->setInterval(1000);
-
     }
 
     void work()
