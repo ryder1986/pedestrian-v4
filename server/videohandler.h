@@ -136,6 +136,7 @@ public:
                     //   waitKey(1);
                     objs.clear();
                 }
+                emit send_rst(NULL,1);
 
             }
             else
@@ -148,7 +149,8 @@ public:
 #endif
     }
 
-
+signals:
+    void send_rst(void *data,int len);
 private:
     Mat gray_frame;
     Mat pedestrians;
